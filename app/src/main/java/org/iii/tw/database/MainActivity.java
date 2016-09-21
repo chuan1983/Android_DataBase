@@ -1,10 +1,12 @@
 package org.iii.tw.database;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,16 +24,21 @@ public class MainActivity extends AppCompatActivity {
         db = dbHelper.getReadableDatabase();
         mesg = (TextView)findViewById(R.id.mesg);
     }
-    public void intert(){
+    public void intert(View v){
+        ContentValues data = new ContentValues();
+        data.put("cname","chuan");
+        data.put("tel","123");
+        data.put("birthday","1999-01-02");
+        db.insert("cust",null,data);
+        query(null);
+    }
+    public void delete(View v){
 
     }
-    public void delete(){
+    public void update(View v){
 
     }
-    public void update(){
-
-    }
-    public void query(){
+    public void query(View v){
         mesg.setText("");
         Cursor c = db.query("cust",null,null,null,null,null,null);
         while (c.moveToNext()){
