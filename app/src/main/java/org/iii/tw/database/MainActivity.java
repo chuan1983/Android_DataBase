@@ -25,14 +25,18 @@ public class MainActivity extends AppCompatActivity {
         mesg = (TextView)findViewById(R.id.mesg);
     }
     public void intert(View v){
+        //INSERT INTO cust (cname,tel,birthday) VALUES ('chuan','123','1999-01-02')
         ContentValues data = new ContentValues();
-        data.put("cname","chuan");
-        data.put("tel","123");
-        data.put("birthday","1999-01-02");
+        data.put("cname","Eric");
+        data.put("tel","789");
+        data.put("birthday","1999-01-04");
         db.insert("cust",null,data);
         query(null);
     }
     public void delete(View v){
+        //DELETE FROM cust WHERE id = 3 and cname = 'brad'
+        db.delete("cust","id = ? and cname = ?",new String[]{"3","chuan"});
+        query(null);
 
     }
     public void update(View v){

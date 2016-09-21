@@ -19,7 +19,7 @@ public class MyDBHelper extends SQLiteOpenHelper{         //是建立資料表  
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        db.execSQL(createTabe1);
     }
 
     @Override
