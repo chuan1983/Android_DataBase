@@ -7,29 +7,29 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Addition"
-        android:onClick="add"
+        android:text="intert"
+        android:onClick="intert"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete"
-        android:onClick="del"
+        android:text="delete"
+        android:onClick="delete"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Revise"
-        android:onClick="rev"
+        android:text="update"
+        android:onClick="update"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Search"
-        android:onClick="ser"
+        android:text="query"
+        android:onClick="query"
         />
     <TextView
-        android:id="@+id/sqlview"
+        android:id="@+id/mesg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
